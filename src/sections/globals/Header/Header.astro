@@ -9,9 +9,8 @@ const links = [
     linkText: "Services",
     link: "/services",
     sublinks: [
-      { linkText: "Service One", link: "/services/service-one" },
-      { linkText: "Service Two", link: "/services/service-two" },
-      { linkText: "Service Three", link: "/services/service-three" },
+      { linkText: "Residential", link: "/services/residential" },
+      { linkText: "Commercial", link: "/services/commercial" },
     ],
   },
   { linkText: "Contact", link: "/contact" },
@@ -23,11 +22,9 @@ interface Props {
 const { className } = Astro.props;
 ---
 
-<header class={(className ? className : "") + " px-edge relative"}>
-  <div
-    class="mx-auto mt-10 flex max-w-screen-2xl items-center justify-between py-4"
-  >
-    <a href="/"><Icon name="logo" width="158" height="60" /></a>
+<header class={(className ? className : "") + " bg-primary px-edge relative"}>
+  <div class="mx-auto flex max-w-screen-2xl items-center justify-between py-6">
+    <a class="text-lg font-bold text-white" href="/">D&D Family Construction</a>
 
     <NavMenu links={links} client:load />
   </div>

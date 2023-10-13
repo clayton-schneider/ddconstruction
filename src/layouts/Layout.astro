@@ -2,7 +2,9 @@
 import "../styles.css";
 import Header from "@sections/globals/Header/Header.astro";
 import Footer from "@sections/globals/Footer/Footer.astro";
-import { SEO, Props as SEOProps } from "astro-seo";
+import { SEO } from "astro-seo";
+import type { Props as SEOProps } from "astro-seo";
+import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
 
 export interface Props {
   seo: SEOProps;
@@ -10,12 +12,15 @@ export interface Props {
 const { seo } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <GoogleFontsOptimizer
+      url="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Rubik:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    />
     <SEO {...seo} />
   </head>
   <body>

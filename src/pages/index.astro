@@ -6,13 +6,44 @@ import OffsetFAQs from "@sections/faq/OffsetFAQs.astro";
 
 <Layout
   seo={{
-    title: "Simply Sprout Starter",
+    title: "D&D Family Construction",
     description: "The starter template for all Simply Sprout websites.",
   }}
 >
-  <section class="px-edge py-10 lg:py-20">
-    <div class="max-w-screen-xl mx-auto">
-      <h1>Hi</h1>
+  <!-- Hero Section -->
+  <section class="relative px-edge py-10 lg:py-20">
+    <Image
+      class="absolute inset-0 h-full w-full object-cover"
+      quality={100}
+      src={import("@imgs/pages/home/hero-bg.png")}
+      loading="eager"
+      alt="yellow background image"
+    />
+    <div
+      class="relative z-10 mx-auto flex max-w-screen-2xl flex-col justify-between gap-8 lg:flex-row"
+    >
+      <div
+        class="mx-auto mt-10 max-w-xl shrink-0 grow text-center text-white lg:mt-20 lg:text-left"
+      >
+        <h1 class="text-2xl font-bold uppercase">D&D Family Construction</h1>
+        <h2 class="mt-2 text-5xl font-bold">
+          Glass & Metal Construction For Hire
+        </h2>
+        <p class="mt-2 text-lg leading-relaxed">
+          With over 15 years of experience D&D Family Construction has the
+          skills to work safely and effectively on a wide range of projects.
+        </p>
+        <a
+          class="mt-2 inline-block w-full border-2 border-dark bg-dark px-6 py-4 text-center transition-all duration-300 hover:bg-transparent"
+          href="">Request A Quote</a
+        >
+      </div>
+      <Image
+        loading="eager"
+        class="shrink grow-0"
+        src={import("@imgs/pages/home/hero-slants.png")}
+        alt="d&d construction at work"
+      />
     </div>
   </section>
 

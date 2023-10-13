@@ -19,12 +19,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#00C24E",
+        primary: "#D5A843",
+        dark: "#5C6570",
+        accent: "#FF6666",
+        light: "#F5C396",
         "text-light": "#FFFFFF",
         "text-dark": "#000000",
       },
       padding: {
         edge: "2.5%",
+      },
+      fontFamily: {
+        sans: ["Rubik", ...FONT_FAMILY_BASE],
       },
     },
   },

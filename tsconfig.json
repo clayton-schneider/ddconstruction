@@ -5,7 +5,8 @@
     "paths": {
       "@data/*": ["src/data/*"],
       "@components/*": ["src/components/*"],
-      "@sections/*": ["src/sections/*"]
+      "@sections/*": ["src/sections/*"],
+      "@imgs/*": ["src/imgs/*"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"
