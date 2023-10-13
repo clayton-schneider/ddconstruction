@@ -10,19 +10,19 @@ const Hamburger = ({ isOpen, clicked }: Props) => {
     >
       <span
         className={
-          "mx-auto my-1 block h-1 w-7 transition-all duration-300 bg-black " +
+          "mx-auto my-1 block h-1 w-7 bg-white transition-all duration-300 " +
           (isOpen ? "translate-y-2 rotate-45 " : "")
         }
       ></span>
       <span
         className={
-          "bg-black mx-auto my-1 block h-1 w-7 transition-all duration-300 " +
+          "mx-auto my-1 block h-1 w-7 bg-white transition-all duration-300 " +
           (isOpen ? "opacity-0 " : "")
         }
       ></span>
       <span
         className={
-          "bg-black mx-auto my-1 block h-1 w-7 transition-all duration-300 " +
+          "mx-auto my-1 block h-1 w-7 bg-white transition-all duration-300 " +
           (isOpen ? "-translate-y-2 -rotate-45 " : "")
         }
       ></span>
