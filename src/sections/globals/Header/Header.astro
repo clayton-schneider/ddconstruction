@@ -24,7 +24,9 @@ const { className } = Astro.props;
 ---
 
 <header class={(className ? className : "") + " px-edge relative"}>
-  <div class="mx-auto flex max-w-screen-2xl items-center justify-between py-4">
+  <div
+    class="mx-auto mt-10 flex max-w-screen-2xl items-center justify-between py-4"
+  >
     <a href="/"><Icon name="logo" width="158" height="60" /></a>
 
     <NavMenu links={links} client:load />
