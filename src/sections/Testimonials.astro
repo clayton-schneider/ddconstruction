@@ -14,7 +14,7 @@ const testimonials = [
 ];
 ---
 
-<section class="bg-primary px-edge py-10 lg:py-20">
+<section class="px-edge py-10 lg:py-20">
   <div class="mx-auto max-w-[90%] lg:max-w-2xl">
     <div class="text-center">
       <div class="flex items-center justify-center gap-2">
@@ -35,7 +35,7 @@ const testimonials = [
       {
         testimonials.map((testimonial) => (
           // Testimonial card
-          <div class="mx-auto w-full max-w-2xl -skew-x-12 bg-white px-12 py-10 lg:px-16 lg:py-14">
+          <div class="mx-auto w-full max-w-2xl -skew-x-12 bg-primary  px-12 py-10 shadow-md lg:px-16 lg:py-14">
             <div class="skew-x-12">
               <div class="float-left mr-6 [shape-outside:circle()]">
                 <Image
@@ -46,7 +46,7 @@ const testimonials = [
                 />
               </div>
               <div class="">
-                <p class="font-bold">{testimonial.name}</p>
+                <p class="text-2xl font-bold">{testimonial.name}</p>
                 <p class="mt-2">{testimonial.review}</p>
               </div>
             </div>

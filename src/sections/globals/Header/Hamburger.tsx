@@ -7,7 +7,7 @@ const Hamburger = ({ isOpen, clicked }: Props) => {
     <button
       aria-label="mobile menu"
       onClick={clicked}
-      className="relative z-50 cursor-pointer xl:hidden"
+      className="relative z-50 cursor-pointer pr-edge xl:hidden"
     >
       <span
         className={

@@ -19,12 +19,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#D5A843",
+        primary: "#FFD523",
+        secondary: "#2C2E43",
         dark: "#5C6570",
         accent: "#FF6666",
         light: "#F5C396",
         "text-light": "#FFFFFF",
-        "text-dark": "#000000",
+        "text-dark": "#211d11",
       },
       padding: {
         edge: "2.5%",
