@@ -1,0 +1,58 @@
+---
+import Icon from "astro-icon";
+import { Image } from "astro:assets";
+
+// testimonial images
+const rafhiaImg = await import("@imgs/testimonials/rafhia-foster.jpg");
+const testimonials = [
+  {
+    name: "Rafhia Foster",
+    img: rafhiaImg,
+    review:
+      "Local business that provides amazing quality work for both large and small residential and commercial projects. You won't be disappointed!",
+  },
+];
+---
+
+<section class="bg-primary px-edge py-10 lg:py-20">
+  <div class="mx-auto max-w-[90%] lg:max-w-2xl">
+    <div class="text-center">
+      <div class="flex items-center justify-center gap-2">
+        <p class="uppercase">reviews</p>
+        <div class="flex">
+          {
+            [...Array(5)].map(() => (
+              <Icon name="mdi:star" size={30} class="text-yellow-500" />
+            ))
+          }
+        </div>
+      </div>
+      <h2 class="mt-2 text-4xl font-bold">
+        D&D Family Construction Happy Clients
+      </h2>
+    </div>
+    <div class="mt-5">
+      {
+        testimonials.map((testimonial) => (
+          // Testimonial card
+          <div class="mx-auto w-full max-w-2xl -skew-x-12 bg-white px-12 py-10 lg:px-16 lg:py-14">
+            <div class="skew-x-12">
+              <div class="float-left mr-6 [shape-outside:circle()]">
+                <Image
+                  width={112}
+                  class="h-28 w-28 rounded-full"
+                  src={testimonial.img.default}
+                  alt={testimonial.name}
+                />
+              </div>
+              <div class="">
+                <p class="font-bold">{testimonial.name}</p>
+                <p class="mt-2">{testimonial.review}</p>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

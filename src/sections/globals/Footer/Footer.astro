@@ -7,19 +7,19 @@ import { Icon } from "astro-icon";
 const date = new Date();
 ---
 
-<section class="py-10 px-edge">
+<section class="bg-primary px-edge py-10">
   <footer>
     <div
-      class="mx-auto flex flex-col text-center lg:text-left gap-10 items-center lg:flex-row lg:items-start max-w-screen-2xl justify-between"
+      class="mx-auto flex max-w-screen-2xl flex-col items-center justify-between gap-10 text-center lg:flex-row lg:items-start lg:text-left"
     >
-      <div class="max-w-sm mx-auto lg:mx-0">
-        <Icon name="logo" width="158" height="60" class="mx-auto lg:mx-0" />
+      <div class="mx-auto max-w-sm lg:mx-0">
+        <p class="text-lg font-bold">D&D Family Construction</p>
         <p class="mt-2 text-lg">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum non ab
           exercitationem veritatis, labore nobis ipsa officiis magnam sequi,
           iusto asperiores.
         </p>
-        <div class="mt-6 flex justify-center lg:justify-start space-x-2">
+        <div class="mt-6 flex justify-center space-x-2 lg:justify-start">
           {
             socials.map((social) => (
               <a href={social.link} target="_blank" aria-label={social.name}>
@@ -31,7 +31,7 @@ const date = new Date();
       </div>
 
       <div>
-        <p class="font-bold text-lg">Our Hours</p>
+        <p class="text-lg font-bold">Our Hours</p>
         <ul class="mt-2">
           {
             hours.map((hour) => (
@@ -46,12 +46,12 @@ const date = new Date();
       </div>
 
       <div>
-        <p class="font-bold text-lg">Contact Us</p>
-        <ul class="mt-2">
+        <p class="text-lg font-bold">Contact Us</p>
+        <ul class="mt-2 space-y-2">
           {
             contacts.map((contact) => (
-              <li class="flex space-x-2 justify-center lg:justify-start">
-                <Icon name={contact.icon} size={30} />
+              <li class="flex justify-center space-x-2 lg:justify-start">
+                <Icon name={contact.icon} size={30} aria-label={contact.name} />
                 <p>{contact.text}</p>
               </li>
             ))
@@ -60,11 +60,12 @@ const date = new Date();
       </div>
     </div>
   </footer>
-  <div class="bg-primary-darker py-4">
+  <div class="pt-4">
     <p class="text-center text-xl">
-      Copyright © {date.getFullYear()} Website Name | All Rights Reserved | Powered
-      By <a target="_blank" href="https://www.simply-sprout.com"
-        >Simply Sprout</a
+      Copyright © {date.getFullYear()} D&D Family Construction | All Rights
+      Reserved | Powered By <a
+        target="_blank"
+        href="https://www.simply-sprout.com">Simply Sprout</a
       >
     </p>
   </div>

@@ -24,7 +24,7 @@ const { className } = Astro.props;
 
 <header class={(className ? className : "") + " bg-primary px-edge relative"}>
   <div class="mx-auto flex max-w-screen-2xl items-center justify-between py-6">
-    <a class="text-lg font-bold text-white" href="/">D&D Family Construction</a>
+    <a class="text-lg font-bold" href="/">D&D Family Construction</a>
 
     <NavMenu links={links} client:load />
   </div>

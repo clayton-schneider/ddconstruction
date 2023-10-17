@@ -22,7 +22,7 @@ const NavMenu = ({ links }: Props) => {
     <div>
       <ul
         className={
-          "font-bebas lg:text-text-darktransition-all absolute top-[83px] z-50 flex w-full flex-col items-start gap-6 bg-white px-4 py-5 text-xl text-text-dark duration-300 lg:text-white xl:static xl:w-auto xl:flex-row xl:items-center xl:bg-transparent xl:px-0 xl:py-0 " +
+          "font-bebas lg:text-text-darktransition-all absolute top-[83px] z-50 flex w-full flex-col items-start gap-6 bg-white px-4 py-5 text-xl duration-300 xl:static xl:w-auto xl:flex-row xl:items-center xl:bg-transparent xl:px-0 xl:py-0 " +
           (isOpen ? "left-0 z-40 shadow shadow-neutral-200" : "-left-full")
         }
       >
