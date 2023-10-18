@@ -57,7 +57,7 @@ const NavMenu = ({ links }: Props) => {
           <li>
             <a
               href=""
-              className="text-secondary !block w-full -skew-x-3 border-2 border-primary bg-primary px-10 py-4 text-center transition-all duration-300 hover:bg-transparent hover:text-primary lg:w-auto lg:text-left"
+              className="!block w-full -skew-x-3 border-2 border-primary bg-primary px-10 py-4 text-center font-semibold uppercase  text-secondary transition-all duration-300 hover:bg-transparent hover:text-primary  lg:w-auto  lg:text-left"
             >
               <span className="skew-x-3 tracking-wide">Request Estimate</span>
             </a>
