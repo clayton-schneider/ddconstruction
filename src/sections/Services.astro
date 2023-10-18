@@ -1,15 +1,60 @@
 ---
+import Icon from "astro-icon";
 import { Image } from "astro:assets";
+
+const services = [
+  {
+    name: "Residential Work",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ad commodi rem quidem dolorem nemo! Doloremque adipisci beatae nisi molestias.",
+    link: "/services/residential-work",
+    icon: "fa-solid:building",
+  },
+  {
+    name: "Commercial Work",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ad commodi rem quidem dolorem nemo! Doloremque adipisci beatae nisi molestias.",
+    link: "/services/commercial-work",
+    icon: "ic:baseline-house",
+  },
+];
 ---
 
 <section class="px-edge py-10 lg:py-20">
   <div class="mx-auto max-w-screen-2xl">
-    <div>
-      <h2 class="text-4xl font-bold">Our Services</h2>
-      <p class="text-lg">Subtext</p>
+    <div
+      class="flex flex-col items-center justify-between gap-10 text-center lg:flex-row lg:gap-20 lg:text-left"
+    >
+      <div class="shrink-0 grow">
+        <p
+          class="text-text-subheading p-4
+          text-lg
+           font-bold uppercase before:relative before:right-2
+           before:inline-block before:h-1 before:w-1/6 before:bg-primary
+           before:align-middle"
+        >
+          What We Do
+        </p>
+        <h2
+          class="relative z-50 mt-2 text-6xl font-bold
+            tracking-wide before:absolute
+           before:left-0 before:top-0 before:-z-10 before:inline-block before:h-10 before:w-48 before:bg-primary"
+        >
+          Our Services
+        </h2>
+      </div>
+      <div>
+        <p class="max-w-xl text-text-dark">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde animi
+          reiciendis perspiciatis eveniet qui aliquam deleniti deserunt fuga
+          molestias sint.
+        </p>
+      </div>
     </div>
-    <div class="mt-10 flex justify-between gap-10">
-      <div class="max-w-3xl shrink grow-0">
+    <div
+      class="mt-10 flex flex-col items-center justify-between gap-10 lg:flex-row"
+    >
+      <div class="max-w-2xl shrink grow-0">
         <Image
           class=""
           src={import("@imgs/testimonials/rafhia-foster.jpg")}
@@ -17,17 +62,33 @@ import { Image } from "astro:assets";
         />
       </div>
       <div class="shrink-0 grow">
-        <div>
-          <div
-            class="mx-auto w-full max-w-2xl -skew-x-12 bg-primary px-12 py-10 text-text-dark shadow-md lg:px-16 lg:py-14"
-          >
-            <div class="skew-x-12">
-              <div class="">
-                <p class="text-2xl font-bold">Residential Work</p>
-                <p class="mt-2">Commercial Work</p>
-              </div>
-            </div>
-          </div>
+        <div class="space-y-7">
+          {
+            services.map((service) => (
+              <a class="block" href={service.link} aria-label={service.name}>
+                <div class="border-borderColor hover:border-secondary hover:bg-secondary group ml-auto w-full max-w-2xl -skew-x-3 border px-12 py-10 text-text-dark transition-all duration-300 hover:text-text-light lg:px-16 lg:py-14">
+                  <div class="skew-x-3">
+                    <div class="">
+                      <Icon
+                        class="text-primary"
+                        name={service.icon}
+                        size={45}
+                      />
+                      <h4 class="text-secondary mt-7 text-2xl font-black uppercase tracking-wide transition-all duration-300 group-hover:text-text-light">
+                        {service.name}
+                      </h4>
+                      <p class="mt-7 ">{service.description}</p>
+                    </div>
+                    <Icon
+                      class="ml-auto mt-7 text-primary"
+                      name="fluent:arrow-right-12-filled"
+                      size={30}
+                    />
+                  </div>
+                </div>
+              </a>
+            ))
+          }
         </div>
       </div>
     </div>
