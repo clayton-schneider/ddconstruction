@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require("tailwindcss/colors");
 
 const FONT_FAMILY_BASE = [
   "system-ui",
@@ -26,6 +27,8 @@ module.exports = {
         light: "#F5C396",
         "text-light": "#FFFFFF",
         "text-dark": "#211d11",
+        "text-heading": "#2C2E43",
+        "text-subheading": colors.stone["500"],
       },
       padding: {
         edge: "2.5%",

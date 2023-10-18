@@ -7,13 +7,15 @@ import { Icon } from "astro-icon";
 const date = new Date();
 ---
 
-<section class="bg-primary px-edge py-10">
+<section
+  class="bg-secondary border-t-8 border-t-primary px-edge py-10 text-text-light"
+>
   <footer>
     <div
       class="mx-auto flex max-w-screen-2xl flex-col items-center justify-between gap-10 text-center lg:flex-row lg:items-start lg:text-left"
     >
-      <div class="mx-auto max-w-sm lg:mx-0">
-        <p class="text-lg font-bold">D&D Family Construction</p>
+      <div class="mx-auto max-w-md lg:mx-0">
+        <p class="text-2xl font-bold">D&D Family Construction</p>
         <p class="mt-2 text-lg">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum non ab
           exercitationem veritatis, labore nobis ipsa officiis magnam sequi,
@@ -23,45 +25,52 @@ const date = new Date();
           {
             socials.map((social) => (
               <a href={social.link} target="_blank" aria-label={social.name}>
-                <Icon name={social.icon} size={30} color="black" />
+                <Icon name={social.icon} size={30} color="white" />
               </a>
             ))
           }
         </div>
       </div>
 
-      <div>
-        <p class="text-lg font-bold">Our Hours</p>
-        <ul class="mt-2">
-          {
-            hours.map((hour) => (
-              <li>
-                <p>
-                  {hour.day}: {hour.open}-{hour.close}
-                </p>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
+      <!-- Link Group -->
+      <div class="flex flex-col items-center gap-10 lg:flex-row lg:gap-14">
+        <div>
+          <p class="text-lg font-bold">Our Hours</p>
+          <ul class="mt-4 space-y-4 lg:mt-8">
+            {
+              hours.map((hour) => (
+                <li>
+                  <p>
+                    {hour.day}: {hour.open}-{hour.close}
+                  </p>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
 
-      <div>
-        <p class="text-lg font-bold">Contact Us</p>
-        <ul class="mt-2 space-y-2">
-          {
-            contacts.map((contact) => (
-              <li class="flex justify-center space-x-2 lg:justify-start">
-                <Icon name={contact.icon} size={30} aria-label={contact.name} />
-                <p>{contact.text}</p>
-              </li>
-            ))
-          }
-        </ul>
+        <div>
+          <p class="text-lg font-bold">Contact Us</p>
+          <ul class="mt-4 space-y-4 lg:mt-8">
+            {
+              contacts.map((contact) => (
+                <li class="flex justify-center space-x-2 lg:justify-start">
+                  <Icon
+                    name={contact.icon}
+                    size={30}
+                    aria-label={contact.name}
+                  />
+                  <p>{contact.text}</p>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
       </div>
     </div>
   </footer>
-  <div class="pt-4">
-    <p class="text-center text-xl">
+  <div class="mx-auto mt-12 max-w-screen-2xl border-t border-t-white/60">
+    <p class="mt-6 text-center text-sm lg:text-left">
       Copyright © {date.getFullYear()} D&D Family Construction | All Rights
       Reserved | Powered By <a
         target="_blank"
