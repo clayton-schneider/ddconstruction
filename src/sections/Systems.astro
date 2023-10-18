@@ -1,0 +1,64 @@
+---
+import Icon from "astro-icon";
+const systems = ["ykk", "kawneer", "tubelite", "efco"];
+---
+
+<section class="px-edge py-10 text-center lg:py-20">
+  <div class="mx-auto max-w-screen-2xl">
+    <div>
+      <h2 class="text-text-heading text-6xl font-black uppercase">
+        Systems We Work With
+      </h2>
+      <p class="mx-auto mt-7 max-w-md text-lg">
+        This is not a complete list, but some of the more common systems that we
+        work with.
+      </p>
+    </div>
+    <div class="splide testimonial-carousel" aria-label="testimonial carousel">
+      <div class="splide__track py-7">
+        <ul class="splide__list">
+          {
+            systems.map((system) => (
+              <li class="splide__slide grid place-items-center">
+                <div class="flex w-full max-w-[350px] justify-center text-center ">
+                  <Icon
+                    name={system}
+                    color="grey"
+                    class="h-[200px] fill-green-700 text-green-700"
+                  />
+                </div>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import Splide from "@splidejs/splide";
+  import "@splidejs/splide/css/core";
+
+  new Splide(".testimonial-carousel", {
+    lazyLoad: true,
+    autoplay: true,
+    interval: 3000,
+    type: "loop",
+    gap: "10px",
+    perPage: 3,
+    perMove: 1,
+    breakpoints: {
+      "1024": {
+        perPage: 1,
+        destroy: false,
+      },
+    },
+    classes: {
+      arrow: "hidden",
+      pagination:
+        "flex justify-center mt-2 space-x-1 [&>li]:flex [&>li]:items-center h-[14px]",
+      page: "w-5 h-5 bg-primary/30 transition-all duration-300 [&.is-active]:bg-secondary  [&.is-active]:w-6 [&.is-active]:h-6",
+    },
+  }).mount();
+</script>

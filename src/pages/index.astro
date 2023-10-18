@@ -1,11 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
-import OffsetFAQs from "@sections/faq/OffsetFAQs.astro";
 import Testimonials from "@sections/Testimonials.astro";
 import Services from "@sections/Services.astro";
 import Reasons from "@sections/Reasons.astro";
 import CTA from "@sections/CTA.astro";
+import Systems from "@sections/Systems.astro";
 ---
 
 <Layout
@@ -81,10 +81,13 @@ import CTA from "@sections/CTA.astro";
           >
         </div>
 
-        <div class="h-[655px] w-full max-w-[655px] bg-red-500"></div>
+        <div
+          class="h-[655px] w-full max-w-[655px] bg-red-500 [clip-path:polygon(10%_0%,100%_0%,90%_100%,0%_100%)]"
+        >
+        </div>
       </div>
     </div>
+    <Systems />
     <CTA />
-    <OffsetFAQs />
   </section>
 </Layout>
