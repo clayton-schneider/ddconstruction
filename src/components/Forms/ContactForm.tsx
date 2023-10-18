@@ -64,7 +64,7 @@ const ContactForm = ({
     try {
       await fetch(
         "https://send-email.simplysprout.workers.dev/",
-        requestOptions
+        requestOptions,
       );
       if (redirect) {
         document.location.href = redirect;
@@ -79,7 +79,7 @@ const ContactForm = ({
   const handleChange = (
     event:
       | React.ChangeEvent<HTMLTextAreaElement>
-      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLInputElement>,
   ) => {
     const { id, value } = event.target;
     //@ts-ignore
@@ -113,7 +113,7 @@ const ContactForm = ({
           }
           key={`input-${key}`}
         >
-          <label htmlFor={field.id} className="">
+          <label htmlFor={field.id} className="text-sm text-text-light">
             {field.name}
           </label>
           {field.fieldType === "textarea" ? (
@@ -121,7 +121,7 @@ const ContactForm = ({
               onChange={handleChange}
               name={field.name}
               id={field.id}
-              className="h-[150px] w-full resize-none rounded border bg-white px-4 pt-2 placeholder:text-black focus:outline-none"
+              className="focus:outline-jnone h-[150px] w-full  resize-none border-b-4 border-primary bg-white/40 px-4 py-2 placeholder:text-text-light"
               placeholder={field.name}
             />
           ) : (
@@ -130,7 +130,7 @@ const ContactForm = ({
               type={field.fieldType}
               name={field.name}
               id={field.id}
-              className="w-full rounded bg-white py-2 pl-4 placeholder:text-black focus:outline-none"
+              className="w-full border-b-4 border-primary bg-white/40 py-5 pl-4 placeholder:text-text-light focus:outline-none"
               placeholder={field.name}
             />
           )}
@@ -138,7 +138,7 @@ const ContactForm = ({
       ))}
 
       {(formState === "ready" || formState === "empty") && (
-        <button className="col-span-full rounded border-2 border-transparent bg-primary py-6 px-7 text-center leading-none text-white transition-all duration-300 hover:border-primary hover:bg-transparent hover:text-primary">
+        <button className="mt-7 -skew-x-3 place-self-start border-2 border-primary border-transparent bg-primary px-10 py-4 text-center font-semibold uppercase leading-none text-secondary transition-all duration-300  hover:border-primary hover:bg-transparent hover:text-primary   lg:text-left ">
           {button}
         </button>
       )}
