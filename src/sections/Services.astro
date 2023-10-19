@@ -7,14 +7,14 @@ const services = [
     name: "Residential Work",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ad commodi rem quidem dolorem nemo! Doloremque adipisci beatae nisi molestias.",
-    link: "/services/residential-work",
+    link: "/",
     icon: "fa-solid:building",
   },
   {
     name: "Commercial Work",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ad commodi rem quidem dolorem nemo! Doloremque adipisci beatae nisi molestias.",
-    link: "/services/commercial-work",
+    link: "/",
     icon: "ic:baseline-house",
   },
 ];
@@ -27,9 +27,9 @@ const services = [
     >
       <div class="shrink-0 grow">
         <h6
-          class="text-text-subheading p-4
-          text-lg
-           font-bold uppercase before:relative before:right-2
+          class="p-4 text-lg
+          font-bold
+           uppercase text-text-subheading before:relative before:right-2
            before:inline-block before:h-1 before:w-1/6 before:bg-primary
            before:align-middle"
         >
@@ -66,7 +66,7 @@ const services = [
           {
             services.map((service) => (
               <a class="block" href={service.link} aria-label={service.name}>
-                <div class="border-borderColor hover:border-secondary hover:bg-secondary group ml-auto w-full max-w-2xl -skew-x-3 border px-12 py-10 text-text-dark transition-all duration-300 hover:text-text-light lg:px-16 lg:py-14">
+                <div class="group ml-auto w-full max-w-2xl -skew-x-3 border border-borderColor px-12 py-10 text-text-dark transition-all duration-300 hover:border-secondary hover:bg-secondary hover:text-text-light lg:px-16 lg:py-14">
                   <div class="skew-x-3">
                     <div class="">
                       <Icon
@@ -74,7 +74,7 @@ const services = [
                         name={service.icon}
                         size={45}
                       />
-                      <h4 class="text-secondary mt-7 text-2xl font-black uppercase tracking-wide transition-all duration-300 group-hover:text-text-light">
+                      <h4 class="mt-7 text-2xl font-black uppercase tracking-wide text-secondary transition-all duration-300 group-hover:text-text-light">
                         {service.name}
                       </h4>
                       <p class="mt-7 ">{service.description}</p>
